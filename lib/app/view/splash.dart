@@ -6,16 +6,40 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Image.asset(
-              'assets/images/shape.png',
+      body: Column(
+        children: [
+          Row(
+            children: [
+              Image.asset(
+                'assets/images/shape.png',
+                width: 141,
+                height: 129,
+              ),
+            ],
+          ),
+          const SizedBox(height: 79),
+          Image.asset(
+            'assets/images/onboarding-image.png',
+            width: 180,
+            height: 168,
+          ),
+          const SizedBox(height: 79),
+          Text(
+            'Lista de Tarefas',
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ),
+          ),
+          const SizedBox(height: 21),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 32),
+            child: Text(
+              'A melhor forma de não se esquecer de nada é anotando. Guarde suas tarefas e vá completando aos poucos para aumentar sua produtividade',
+              textAlign: TextAlign.center,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
