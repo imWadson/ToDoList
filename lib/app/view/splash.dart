@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_list/app/view/task_list.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -30,6 +31,15 @@ class SplashPage extends StatelessWidget {
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
                 ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => TaskListPage(),
+                ),
+              );
+            },
           ),
           const SizedBox(height: 21),
           const Padding(
