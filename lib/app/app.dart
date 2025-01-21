@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo_list/app/view/splash_page.dart';
+import 'package:todo_list/app/view/splash/splash_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
