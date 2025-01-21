@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:todo_list/app/view/components/app_title.dart';
+import 'package:todo_list/app/view/components/shape.dart';
 import 'package:todo_list/app/view/task_list/task_list_page.dart';
 
 class SplashPage extends StatelessWidget {
@@ -18,12 +20,8 @@ class SplashPage extends StatelessWidget {
         child: Column(
           children: [
             Row(
-              children: [
-                Image.asset(
-                  'assets/images/shape.png',
-                  width: 141,
-                  height: 129,
-                ),
+              children: const [
+                Shape(),
               ],
             ),
             const SizedBox(height: 79),
@@ -33,13 +31,7 @@ class SplashPage extends StatelessWidget {
               height: 168,
             ),
             const SizedBox(height: 79),
-            Text(
-              'Lista de Tarefas',
-              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                  ),
-            ),
+            AppTitle(text: 'Lista de tarefas'),
             const SizedBox(height: 21),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 32),
