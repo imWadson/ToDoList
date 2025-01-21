@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo_list/app/view/splash.dart';
+import 'package:todo_list/app/view/splash_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -10,10 +10,11 @@ class MyApp extends StatelessWidget {
     const textColor = Color(0xFF4A4A4A);
     const backgroundColor = Color(0xFFF5F5F5);
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: primary),
-          scaffoldBackgroundColor: backgroundColor,
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: primary),
+        scaffoldBackgroundColor: backgroundColor,
         textTheme: const TextTheme(
           bodyMedium: TextStyle(
             fontFamily: 'Poppins',
@@ -21,8 +22,9 @@ class MyApp extends StatelessWidget {
             fontSize: 14,
           ),
         ),
-          useMaterial3: true,
-        ),
-        home: SplashPage());
+        useMaterial3: true,
+      ),
+      home: SplashPage(),
+    );
   }
 }

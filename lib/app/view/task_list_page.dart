@@ -10,6 +10,11 @@ class TaskListPage extends StatefulWidget {
 class _TaskListPageState extends State<TaskListPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Lista de Tarefas'),
+          backgroundColor: Theme.of(context).primaryColor,
+        ),
+        body: const Text('Ola, testando'));
   }
 }
