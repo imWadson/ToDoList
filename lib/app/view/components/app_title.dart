@@ -9,7 +9,7 @@ class AppTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      'Lista de Tarefas',
+      text,
       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
             fontSize: 18,
             fontWeight: FontWeight.w600,
